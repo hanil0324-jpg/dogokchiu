@@ -1,5 +1,6 @@
 import CaseArchive from './components/CaseArchive';
 import CenterPage from './components/CenterPage';
+import EquipmentSection from './components/EquipmentSection';
 import FeatureTreatmentSection from './components/FeatureTreatmentSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -87,6 +88,7 @@ export default function App() {
       <main>
         <Hero />
         <TrustSection />
+        <EquipmentSection />
         <VisualProofSection />
         <ValueSection />
         <SurgeryGallerySection />
