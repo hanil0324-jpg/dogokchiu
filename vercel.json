@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/centers/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
