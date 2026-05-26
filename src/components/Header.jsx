@@ -2,11 +2,11 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const navItems = [
-  { label: '병원소개', href: '#philosophy' },
-  { label: '전문센터', href: '#specialty' },
-  { label: '수술 케이스', href: '#cases?category=수술' },
-  { label: '케이스 아카이브', href: '#cases' },
-  { label: '진료문의', href: '#inquiry' },
+  { label: '병원소개', href: '/#philosophy' },
+  { label: '전문센터', href: '/#specialty' },
+  { label: '수술 케이스', href: '/#cases?category=수술' },
+  { label: '케이스 아카이브', href: '/#cases' },
+  { label: '진료문의', href: '/#inquiry' },
 ];
 
 export default function Header() {
@@ -15,10 +15,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/70 bg-white/78 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className="flex items-center gap-2" aria-label="도곡치유 동물병원 홈">
+        <a href="/" className="flex items-center gap-2" aria-label="도곡치유 동물병원 홈">
           <img
             src="/images/logo-main.png"
-            alt="동물병원 치유"
+            alt="도곡치유 동물병원"
             className="h-10 w-auto object-contain"
           />
           <span className="sr-only">도곡치유 동물병원</span>
