@@ -17,7 +17,7 @@ const heroStats = [
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-[760px] overflow-hidden px-5 pb-14 pt-10 sm:pt-14 lg:pb-20">
-      <div className="absolute inset-0 -z-20">
+      <div className="absolute inset-0 z-0">
         <img
           src="/images/hospital-lobby.jpg"
           alt=""
@@ -25,9 +25,9 @@ export default function Hero() {
           aria-hidden="true"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.76)_0%,rgba(247,251,255,0.58)_42%,rgba(18,59,99,0.1)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,59,99,0.1)_0%,rgba(247,251,255,0.2)_48%,rgba(247,251,255,0.92)_100%)]" />
-      <div className="mx-auto grid max-w-6xl items-center gap-7 lg:grid-cols-[0.96fr_1.04fr]">
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.76)_0%,rgba(247,251,255,0.58)_42%,rgba(18,59,99,0.1)_100%)]" />
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(18,59,99,0.1)_0%,rgba(247,251,255,0.2)_48%,rgba(247,251,255,0.92)_100%)]" />
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-7 lg:grid-cols-[0.96fr_1.04fr]">
         <div className="max-w-[720px] rounded-[2rem] border border-white/80 bg-white/88 p-6 shadow-soft backdrop-blur-sm sm:p-8 lg:p-9">
           <div className="mb-5 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-white/82 px-4 py-2 text-xs font-bold text-moss shadow-sm">
@@ -100,7 +100,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto mt-8 grid max-w-6xl overflow-hidden rounded-[1.5rem] border border-white/75 bg-white/88 shadow-soft backdrop-blur-sm md:grid-cols-3">
+      <div className="relative z-10 mx-auto mt-8 grid max-w-6xl overflow-hidden rounded-[1.5rem] border border-white/75 bg-white/88 shadow-soft backdrop-blur-sm md:grid-cols-3">
         <a href="#inquiry" className="flex items-center gap-4 border-b border-oat p-5 md:border-b-0 md:border-r">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-leaf text-moss">
             <Clock size={20} />
