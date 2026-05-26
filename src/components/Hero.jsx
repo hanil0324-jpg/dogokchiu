@@ -16,19 +16,19 @@ const heroStats = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-5 pb-14 pt-10 sm:pt-14 lg:pb-20">
+    <section id="top" className="relative min-h-[760px] overflow-hidden px-5 pb-14 pt-10 sm:pt-14 lg:pb-20">
       <div className="absolute inset-0 -z-20">
         <img
           src="/images/hospital-lobby.jpg"
           alt=""
-          className="h-full w-full object-cover object-center saturate-[0.95]"
+          className="h-full w-full object-cover object-center saturate-[1.02]"
           aria-hidden="true"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.88)_0%,rgba(247,251,255,0.72)_40%,rgba(21,43,63,0.18)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-36 bg-[linear-gradient(180deg,rgba(247,251,255,0),#f7fbff)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.76)_0%,rgba(247,251,255,0.58)_42%,rgba(18,59,99,0.1)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,59,99,0.1)_0%,rgba(247,251,255,0.2)_48%,rgba(247,251,255,0.92)_100%)]" />
       <div className="mx-auto grid max-w-6xl items-center gap-7 lg:grid-cols-[0.96fr_1.04fr]">
-        <div className="max-w-[720px] rounded-[2rem] border border-white/75 bg-white/82 p-6 shadow-soft backdrop-blur-md sm:p-8 lg:p-9">
+        <div className="max-w-[720px] rounded-[2rem] border border-white/80 bg-white/88 p-6 shadow-soft backdrop-blur-sm sm:p-8 lg:p-9">
           <div className="mb-5 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-white/82 px-4 py-2 text-xs font-bold text-moss shadow-sm">
               <BadgeCheck size={15} />
@@ -78,13 +78,6 @@ export default function Hero() {
         </div>
 
         <div className="relative lg:translate-y-6">
-          <div className="mb-4 overflow-hidden rounded-[1.4rem] border border-white/65 bg-white/20 shadow-soft backdrop-blur-sm">
-            <img
-              src="/images/hospital-lobby.jpg"
-              alt="도곡치유 동물병원 대기실"
-              className="h-48 w-full object-cover sm:h-56 lg:h-64"
-            />
-          </div>
           <div className="absolute -right-4 -top-4 z-10 hidden rounded-2xl bg-white px-4 py-3 shadow-soft sm:block">
             <p className="flex items-center gap-2 text-sm font-bold text-ink">
               <ShieldCheck size={17} className="text-moss" />
@@ -107,7 +100,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto mt-8 grid max-w-6xl overflow-hidden rounded-[1.5rem] border border-oat bg-white shadow-soft md:grid-cols-3">
+      <div className="mx-auto mt-8 grid max-w-6xl overflow-hidden rounded-[1.5rem] border border-white/75 bg-white/88 shadow-soft backdrop-blur-sm md:grid-cols-3">
         <a href="#inquiry" className="flex items-center gap-4 border-b border-oat p-5 md:border-b-0 md:border-r">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-leaf text-moss">
             <Clock size={20} />
