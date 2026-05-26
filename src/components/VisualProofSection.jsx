@@ -18,6 +18,14 @@ const doctorCareers = [
   '심장·노령성 질환 진료',
 ];
 
+const jinCareers = [
+  '건국대학교 수의과대학 학사 졸업',
+  '서울수의임상컨퍼런스 참석',
+  '웨스턴 BASIC 기본과정 수료',
+  'KSFM 고양이 진료 마스터 클래스 수료',
+  '공중방역수의사 재직',
+];
+
 const focusItems = [
   {
     title: '수술 전 평가',
@@ -86,7 +94,7 @@ export default function VisualProofSection() {
           </div>
         </article>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
+        <div className="mt-6 grid gap-5 lg:grid-cols-[1fr_1fr_1.08fr]">
           <article className="overflow-hidden rounded-[2rem] border border-oat bg-white shadow-sm">
             <img
               src="/images/doctor-kim.png"
@@ -101,6 +109,23 @@ export default function VisualProofSection() {
                 심장과 노령성 질환을 중심으로 마취 전 환자 상태를 세밀하게 평가합니다.
               </p>
               <CareerList items={doctorCareers} />
+            </div>
+          </article>
+
+          <article className="overflow-hidden rounded-[2rem] border border-oat bg-white shadow-sm">
+            <img
+              src="/images/doctor-jin.png"
+              alt="도곡치유동물병원 진성록 수의사"
+              className="aspect-square w-full object-cover object-top"
+              loading="lazy"
+            />
+            <div className="p-6">
+              <p className="text-xs font-bold text-moss">내과 진료·고양이 진료</p>
+              <h3 className="mt-2 text-2xl font-bold text-ink">진성록 수의사</h3>
+              <p className="mt-3 text-sm leading-6 text-ink/66">
+                보호자와 반려동물이 모두 편안할 수 있도록 세심하고 정확한 진료를 지향합니다.
+              </p>
+              <CareerList items={jinCareers} />
             </div>
           </article>
 
