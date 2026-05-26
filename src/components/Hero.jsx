@@ -21,12 +21,12 @@ export default function Hero() {
         <img
           src="/images/hospital-lobby.jpg"
           alt=""
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center opacity-90 saturate-[0.95]"
           aria-hidden="true"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.98)_0%,rgba(247,251,255,0.94)_45%,rgba(247,251,255,0.72)_72%,rgba(247,251,255,0.56)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(180deg,rgba(247,251,255,0),#f7fbff)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.9)_0%,rgba(247,251,255,0.82)_42%,rgba(247,251,255,0.58)_70%,rgba(247,251,255,0.34)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(247,251,255,0.42)_0%,rgba(247,251,255,0.18)_45%,rgba(247,251,255,0.88)_100%)]" />
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="max-w-[720px]">
           <div className="mb-5 flex flex-wrap gap-2">
