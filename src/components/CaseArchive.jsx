@@ -1,10 +1,31 @@
 import { ArrowUpRight, BookOpenCheck } from 'lucide-react';
+import { useEffect } from 'react';
 import { useMemo, useState } from 'react';
 import { caseCategories, cases } from '../data/cases';
 
 export default function CaseArchive() {
   const [activeCategory, setActiveCategory] = useState('전체');
   const categoryCount = caseCategories.filter((category) => category !== '전체').length;
+  const surgeryCount = cases.filter((caseItem) => caseItem.category === '수술').length;
+
+  useEffect(() => {
+    const applyCategoryFromHash = () => {
+      const hash = decodeURIComponent(window.location.hash);
+      const [, queryString] = hash.split('?');
+      const params = new URLSearchParams(queryString || '');
+      const category = params.get('category');
+
+      if (category && caseCategories.includes(category)) {
+        setActiveCategory(category);
+      }
+    };
+
+    applyCategoryFromHash();
+    window.addEventListener('hashchange', applyCategoryFromHash);
+
+    return () => window.removeEventListener('hashchange', applyCategoryFromHash);
+  }, []);
+
   const filteredCases = useMemo(() => {
     if (activeCategory === '전체') {
       return cases;
@@ -55,6 +76,26 @@ export default function CaseArchive() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mb-6 grid gap-3 rounded-[1.5rem] border border-oat bg-white/92 p-4 shadow-sm sm:grid-cols-[1fr_auto] sm:items-center">
+          <div>
+            <p className="text-xs font-bold text-moss">Surgery Cases</p>
+            <h3 className="mt-1 text-xl font-bold text-ink">수술 케이스만 빠르게 모아보기</h3>
+            <p className="mt-2 text-sm leading-6 text-ink/60">
+              종괴 제거, 중성화, 마취 평가 등 수술 관련 블로그 케이스를 먼저 확인할 수 있습니다.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveCategory('수술');
+              window.history.replaceState(null, '', '#cases?category=수술');
+            }}
+            className="inline-flex items-center justify-center rounded-full bg-moss px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-ink"
+          >
+            수술 케이스 {surgeryCount}건 보기
+          </button>
         </div>
 
         <div className="-mx-5 mb-6 overflow-x-auto px-5 pb-2">
