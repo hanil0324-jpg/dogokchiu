@@ -37,6 +37,16 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+h1,
+h2,
+h3,
+p,
+a,
+button,
+span {
+  word-break: keep-all;
+}
+
 ::selection {
   background: #d8ecff;
   color: #152b3f;
