@@ -9,6 +9,7 @@ import PhilosophySection from './components/PhilosophySection';
 import StaffPage from './components/StaffPage';
 import SpecialtySection from './components/SpecialtySection';
 import SurgeryGallerySection from './components/SurgeryGallerySection';
+import SurgeryTimelineSection from './components/SurgeryTimelineSection';
 import TrustSection from './components/TrustSection';
 import ValueSection from './components/ValueSection';
 import VisualProofSection from './components/VisualProofSection';
@@ -91,6 +92,7 @@ export default function App() {
         <EquipmentSection />
         <VisualProofSection />
         <ValueSection />
+        <SurgeryTimelineSection />
         <SurgeryGallerySection />
         <FeatureTreatmentSection />
         <SpecialtySection />
