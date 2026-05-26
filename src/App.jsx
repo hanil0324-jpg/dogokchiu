@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import InquirySection from './components/InquirySection';
 import PhilosophySection from './components/PhilosophySection';
+import StaffPage from './components/StaffPage';
 import SpecialtySection from './components/SpecialtySection';
 import SurgeryGallerySection from './components/SurgeryGallerySection';
 import TrustSection from './components/TrustSection';
@@ -41,8 +42,18 @@ function getCenterSlug() {
   return match?.[1] || null;
 }
 
+function getStaffSlug() {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  const match = window.location.pathname.match(/^\/staff\/([^/]+)/);
+  return match?.[1] || null;
+}
+
 export default function App() {
   const centerSlug = getCenterSlug();
+  const staffSlug = getStaffSlug();
 
   if (centerSlug) {
     return (
@@ -50,6 +61,19 @@ export default function App() {
         <Header />
         <main>
           <CenterPage slug={centerSlug} />
+          <InquirySection />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (staffSlug) {
+    return (
+      <div className="min-h-screen text-ink">
+        <Header />
+        <main>
+          <StaffPage slug={staffSlug} />
           <InquirySection />
         </main>
         <Footer />
