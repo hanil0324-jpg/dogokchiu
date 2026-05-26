@@ -35,6 +35,7 @@ export default function Hero() {
             aria-hidden="true"
             className="pointer-events-none absolute -right-5 top-7 w-36 opacity-[0.055] sm:w-44"
           />
+          <div className="pointer-events-none absolute -bottom-20 -right-14 h-44 w-44 rounded-full bg-moss/10 blur-3xl" />
           <div className="pointer-events-none absolute inset-x-8 top-0 h-1 rounded-full bg-[linear-gradient(90deg,#1e6fa8,#d8ecff)]" />
           <div className="mb-5 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-white/82 px-4 py-2 text-xs font-bold text-moss shadow-sm">
@@ -47,14 +48,21 @@ export default function Hero() {
             </span>
           </div>
 
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-moss/80">
-            Surgery & Anesthesia Archive
-          </p>
+          <div className="mb-3 flex items-center gap-3">
+            <span className="h-px w-8 bg-moss/45" />
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-moss/80">
+              Surgery & Anesthesia Archive
+            </p>
+          </div>
           <h1 className="max-w-[12em] break-keep text-[2.18rem] font-bold leading-[1.16] tracking-normal text-ink sm:text-[3.15rem] lg:text-[3.55rem]">
             단 한 마리를 위해 깊이 고민하는
-            <span className="block">수술·마취 중심 동물병원</span>
+            <span className="mt-1 block text-moss">수술·마취 중심 동물병원</span>
           </h1>
-          <div className="mt-5 h-px w-24 bg-moss/35" />
+          <div className="mt-5 flex items-center gap-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-moss" />
+            <span className="h-px w-24 bg-moss/35" />
+            <span className="text-xs font-bold text-moss/70">DOGOK HEALING</span>
+          </div>
           <p className="mt-6 max-w-[42rem] break-keep text-base leading-8 text-ink/70 sm:text-lg">
             노령마취, 세보플루란, 외과 박사수료, 심장 협진, 중증 케이스까지.
             도곡치유 동물병원은 보호자가 가장 걱정하는 순간에 더 깊이 살피는 진료를
@@ -64,7 +72,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="#cases"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-ink"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#1e6fa8,#123b63)] px-6 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg"
             >
               케이스 아카이브 보기
               <ArrowDown size={18} />
@@ -99,7 +107,8 @@ export default function Hero() {
               중증 케이스 중심 관리
             </p>
           </div>
-          <div className="overflow-hidden rounded-[2rem] border border-white bg-white shadow-soft">
+          <div className="absolute -inset-4 rounded-[2.25rem] bg-[linear-gradient(135deg,rgba(216,236,255,0.78),rgba(30,111,168,0.18))] blur-xl" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white shadow-soft">
             <img
               src="/images/hospital-surgery.png"
               alt="도곡치유동물병원 심장 노령 중증질환 전문 진료 이미지"
