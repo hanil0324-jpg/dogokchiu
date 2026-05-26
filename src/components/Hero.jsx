@@ -17,9 +17,18 @@ const heroStats = [
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden px-5 pb-14 pt-10 sm:pt-14 lg:pb-20">
-      <div className="absolute inset-x-0 top-0 -z-10 h-72 bg-[linear-gradient(180deg,rgba(223,233,215,0.72),rgba(251,247,238,0))]" />
+      <div className="absolute inset-0 -z-20">
+        <img
+          src="/images/hospital-lobby.jpg"
+          alt=""
+          className="h-full w-full object-cover object-center"
+          aria-hidden="true"
+        />
+      </div>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(247,251,255,0.98)_0%,rgba(247,251,255,0.94)_45%,rgba(247,251,255,0.72)_72%,rgba(247,251,255,0.56)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(180deg,rgba(247,251,255,0),#f7fbff)]" />
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
-        <div>
+        <div className="max-w-[720px]">
           <div className="mb-5 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-white/82 px-4 py-2 text-xs font-bold text-moss shadow-sm">
               <BadgeCheck size={15} />
@@ -31,10 +40,11 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="max-w-3xl text-[2.35rem] font-bold leading-[1.12] tracking-normal text-ink sm:text-5xl lg:text-[3.75rem]">
-            단 한 마리를 위해 깊이 고민하는 수술·마취 중심 동물병원
+          <h1 className="max-w-[12em] break-keep text-[2.18rem] font-bold leading-[1.16] tracking-normal text-ink sm:text-[3.15rem] lg:text-[3.55rem]">
+            단 한 마리를 위해 깊이 고민하는
+            <span className="block">수술·마취 중심 동물병원</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-ink/70 sm:text-lg">
+          <p className="mt-6 max-w-[42rem] break-keep text-base leading-8 text-ink/70 sm:text-lg">
             노령마취, 세보플루란, 외과 박사수료, 심장 협진, 중증 케이스까지.
             도곡치유 동물병원은 보호자가 가장 걱정하는 순간에 더 깊이 살피는 진료를
             지향합니다.
@@ -57,7 +67,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
               <div key={stat.label} className="rounded-2xl border border-oat/75 bg-white/75 p-4 shadow-sm">
                 <p className="text-xs font-bold text-moss">{stat.label}</p>
@@ -67,7 +77,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative lg:translate-y-6">
           <div className="absolute -right-4 -top-4 z-10 hidden rounded-2xl bg-white px-4 py-3 shadow-soft sm:block">
             <p className="flex items-center gap-2 text-sm font-bold text-ink">
               <ShieldCheck size={17} className="text-moss" />
