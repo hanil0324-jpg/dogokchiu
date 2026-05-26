@@ -45,8 +45,8 @@ npm run dev
 - `public/sitemap.xml`: 사이트맵
 - `public/site.webmanifest`: 웹앱/브라우저 기본 정보
 
-현재 SEO 주소는 임시로 `https://dogokchiu.co.kr/`를 사용합니다.
-실제 도메인이 정해지면 아래 항목의 도메인을 실제 주소로 바꿔주세요.
+현재 SEO 주소는 Vercel 배포 주소인 `https://dogokchiu.vercel.app/`를 사용합니다.
+나중에 실제 병원 도메인이 정해지면 아래 항목의 도메인을 실제 주소로 바꿔주세요.
 
 - `index.html`의 `canonical`, `og:url`, `og:image`, JSON-LD `url`, `image`
 - `public/robots.txt`의 `Sitemap`
