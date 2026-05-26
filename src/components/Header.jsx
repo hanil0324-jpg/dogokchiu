@@ -4,6 +4,7 @@ import { useState } from 'react';
 const navItems = [
   { label: '병원소개', href: '/#philosophy' },
   { label: '전문센터', href: '/#specialty' },
+  { label: '장비소개', href: '/#equipment' },
   { label: '수술 케이스', href: '/#cases?category=수술' },
   { label: '케이스 아카이브', href: '/#cases' },
   { label: '진료문의', href: '/#inquiry' },
