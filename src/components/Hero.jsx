@@ -28,7 +28,14 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.76)_0%,rgba(247,251,255,0.58)_42%,rgba(18,59,99,0.1)_100%)]" />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(18,59,99,0.1)_0%,rgba(247,251,255,0.2)_48%,rgba(247,251,255,0.92)_100%)]" />
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-7 lg:grid-cols-[0.96fr_1.04fr]">
-        <div className="max-w-[720px] rounded-[2rem] border border-white/80 bg-white/88 p-6 shadow-soft backdrop-blur-sm sm:p-8 lg:p-9">
+        <div className="relative max-w-[720px] overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-6 shadow-soft backdrop-blur-sm sm:p-8 lg:p-9">
+          <img
+            src="/images/logo-main.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-5 top-7 w-36 opacity-[0.055] sm:w-44"
+          />
+          <div className="pointer-events-none absolute inset-x-8 top-0 h-1 rounded-full bg-[linear-gradient(90deg,#1e6fa8,#d8ecff)]" />
           <div className="mb-5 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-white/82 px-4 py-2 text-xs font-bold text-moss shadow-sm">
               <BadgeCheck size={15} />
@@ -40,10 +47,14 @@ export default function Hero() {
             </span>
           </div>
 
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-moss/80">
+            Surgery & Anesthesia Archive
+          </p>
           <h1 className="max-w-[12em] break-keep text-[2.18rem] font-bold leading-[1.16] tracking-normal text-ink sm:text-[3.15rem] lg:text-[3.55rem]">
             단 한 마리를 위해 깊이 고민하는
             <span className="block">수술·마취 중심 동물병원</span>
           </h1>
+          <div className="mt-5 h-px w-24 bg-moss/35" />
           <p className="mt-6 max-w-[42rem] break-keep text-base leading-8 text-ink/70 sm:text-lg">
             노령마취, 세보플루란, 외과 박사수료, 심장 협진, 중증 케이스까지.
             도곡치유 동물병원은 보호자가 가장 걱정하는 순간에 더 깊이 살피는 진료를
@@ -69,9 +80,13 @@ export default function Hero() {
 
           <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="rounded-2xl border border-oat/75 bg-white/75 p-4 shadow-sm">
-                <p className="text-xs font-bold text-moss">{stat.label}</p>
-                <p className="mt-1 text-sm font-semibold leading-5 text-ink">{stat.value}</p>
+              <div
+                key={stat.label}
+                className="relative overflow-hidden rounded-2xl border border-oat/75 bg-[linear-gradient(180deg,#ffffff,#eef7ff)] p-4 shadow-sm"
+              >
+                <span className="absolute right-3 top-3 h-6 w-6 rounded-full bg-leaf/70" />
+                <p className="relative text-xs font-bold text-moss">{stat.label}</p>
+                <p className="relative mt-1 text-sm font-semibold leading-5 text-ink">{stat.value}</p>
               </div>
             ))}
           </div>
