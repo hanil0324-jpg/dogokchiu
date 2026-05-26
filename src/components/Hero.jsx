@@ -10,8 +10,8 @@ import {
 
 const heroStats = [
   { label: '마취 전 평가', value: '심장·장기 상태 확인' },
-  { label: '수술 관리', value: '집도의 직접 설명' },
-  { label: '회복 관찰', value: '통증·활력 변화 추적' },
+  { label: '수술 중 관리', value: '호흡·혈압·통증 모니터링' },
+  { label: '회복 관찰', value: '통증·활력·식욕 변화 추적' },
 ];
 
 export default function Hero() {
@@ -71,17 +71,17 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#cases"
+              href="#cases?category=수술"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#1e6fa8,#123b63)] px-6 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg"
             >
-              케이스 아카이브 보기
+              실제 수술 케이스 보기
               <ArrowDown size={18} />
             </a>
             <a
               href="#inquiry"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-sage/35 bg-white px-6 py-4 text-sm font-bold text-moss shadow-sm transition hover:-translate-y-0.5 hover:border-moss hover:text-ink"
             >
-              진료 문의하기
+              마취 상담 문의하기
               <MessageCircle size={18} />
             </a>
           </div>
@@ -106,6 +106,10 @@ export default function Hero() {
               <ShieldCheck size={17} className="text-moss" />
               중증 케이스 중심 관리
             </p>
+          </div>
+          <div className="absolute left-5 top-5 z-10 rounded-2xl bg-white/92 px-4 py-3 shadow-soft backdrop-blur">
+            <p className="text-xs font-bold text-moss">심장 협진 기반</p>
+            <p className="mt-1 text-sm font-bold text-ink">노령·중증 수술 관리</p>
           </div>
           <div className="absolute -inset-4 rounded-[2.25rem] bg-[linear-gradient(135deg,rgba(216,236,255,0.78),rgba(30,111,168,0.18))] blur-xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white shadow-soft">
