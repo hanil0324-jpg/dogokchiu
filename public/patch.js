@@ -17,14 +17,11 @@
   ];
 
   function buildCaseCard(c) {
-    return '<a href="' + c.url + '" target="_blank" rel="noopener" style="display:block;border-radius:1.25rem;overflow:hidden;background:var(--surface,#2a2f3a);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform 0.2s;" onmouseover="this.style.transform=\'translateY(-4px)\'" onmouseout="this.style.transform=\'\'">' +
-      '<img src="' + c.img + '" alt="' + c.title + '" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;opacity:0.85;" onerror="this.style.display=\'none\'">' +
-      '<div style="padding:1.25rem;">' +
-        '<span style="display:inline-block;background:rgba(201,168,76,0.15);color:rgba(201,168,76,0.9);font-size:0.7rem;font-weight:700;border-radius:999px;padding:0.2rem 0.75rem;margin-bottom:0.5rem;">' + c.cat + '</span>' +
-        '<h3 style="font-size:0.95rem;font-weight:600;line-height:1.5;margin:0 0 0.75rem;color:rgba(255,255,255,0.88);">' + c.title + '</h3>' +
-        '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">' + c.tags.map(function(t) { return '<span style="font-size:0.68rem;background:rgba(255,255,255,0.07);color:rgba(201,168,76,0.7);border-radius:999px;padding:0.15rem 0.6rem;">#' + t + '</span>'; }).join('') + '</div>' +
-        '<p style="margin:0.75rem 0 0;font-size:0.78rem;color:rgba(201,168,76,0.8);font-weight:600;">블로그 원문 보기 →</p>' +
-      '</div>' +
+    return '<a href="' + c.url + '" target="_blank" rel="noopener" style="display:block;border-radius:1.25rem;background:var(--surface,#2a2f3a);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform 0.2s;padding:1.5rem;" onmouseover="this.style.transform=\'translateY(-4px)\'" onmouseout="this.style.transform=\'\'">' +
+      '<span style="display:inline-block;background:rgba(201,168,76,0.15);color:rgba(201,168,76,0.9);font-size:0.7rem;font-weight:700;border-radius:999px;padding:0.2rem 0.75rem;margin-bottom:0.75rem;">' + c.cat + '</span>' +
+      '<h3 style="font-size:0.95rem;font-weight:600;line-height:1.6;margin:0 0 0.75rem;color:rgba(255,255,255,0.88);">' + c.title + '</h3>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;">' + c.tags.map(function(t) { return '<span style="font-size:0.68rem;background:rgba(255,255,255,0.07);color:rgba(201,168,76,0.7);border-radius:999px;padding:0.15rem 0.6rem;">#' + t + '</span>'; }).join('') + '</div>' +
+      '<p style="margin:0;font-size:0.78rem;color:rgba(201,168,76,0.8);font-weight:600;">블로그 원문 보기 →</p>' +
     '</a>';
   }
 
