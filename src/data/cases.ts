@@ -13,16 +13,16 @@ export type CaseItem = {
 };
 
 export const casePlaceholders: Record<string, string> = {
-  수술: '/images/cases/surgery-anesthesia-monitoring.png',
-  치과: '/images/cases/dog-dental-scaling-heart-check.png',
-  심장: '/images/cases/advanced-surgery-center.png',
-  피부: '/images/cases/atopy-cadesi-dog-skin.jpg',
-  종양: '/images/cases/mast-cell-tumor-surgery-dog.png',
-  정형외과: '/images/cases/puppy-tibial-tuberosity-fracture.png',
-  내시경: '/images/cases/endoscopy-foreign-body-dog.png',
-  내과: '/images/cases/veterinary-hospital-lobby.jpg',
-  응급: '/images/cases/surgery-anesthesia-monitoring.png',
-  default: '/images/cases/veterinary-hospital-lobby.jpg',
+  수술: '/images/surgery-anesthesia-monitoring.png',
+  치과: '/images/dog-dental-scaling-heart-check.png',
+  심장: '/images/advanced-surgery-center.png',
+  피부: '/images/atopy-cadesi-dog-skin.jpg',
+  종양: '/images/mast-cell-tumor-surgery-dog.png',
+  정형외과: '/images/puppy-tibial-tuberosity-fracture.png',
+  내시경: '/images/endoscopy-foreign-body-dog.png',
+  내과: '/images/veterinary-hospital-lobby.jpg',
+  응급: '/images/surgery-anesthesia-monitoring.png',
+  default: '/images/veterinary-hospital-lobby.jpg',
 };
 
 export const cases: CaseItem[] = [
@@ -35,7 +35,7 @@ export const cases: CaseItem[] = [
     summary:
       '구강 상태와 심장, 복부 장기 상태를 함께 확인하며 마취 전 평가 기준을 세운 케이스입니다.',
     tags: ['스케일링', '심장초음파', '노령마취'],
-    image: '/images/cases/dog-dental-scaling-heart-check.png',
+    image: '/images/dog-dental-scaling-heart-check.png',
     blogUrl: 'https://blog.naver.com/chiu_amc/224295025082',
     featured: true,
     date: '2026-05-24',
@@ -49,7 +49,7 @@ export const cases: CaseItem[] = [
     summary:
       '피부 종괴를 단순 지방종으로만 보지 않고 제거 후 병리검사를 통해 진단과 추적 방향을 정리한 케이스입니다.',
     tags: ['종양수술', '세보플루란', '병리검사'],
-    image: '/images/cases/mast-cell-tumor-surgery-dog.png',
+    image: '/images/mast-cell-tumor-surgery-dog.png',
     blogUrl: 'https://blog.naver.com/chiu_amc/224292374452',
     featured: true,
     date: '2026-05-21',
@@ -63,7 +63,7 @@ export const cases: CaseItem[] = [
     summary:
       '성장기 강아지에서 발생할 수 있는 정형외과 질환을 조기에 확인하고 치료 방향을 잡은 케이스입니다.',
     tags: ['성장판', '정형외과', '수술'],
-    image: '/images/cases/puppy-tibial-tuberosity-fracture.png',
+    image: '/images/puppy-tibial-tuberosity-fracture.png',
     blogUrl: 'https://blog.naver.com/chiu_amc/224294510285',
     featured: true,
     date: '2026-05-23',
@@ -77,7 +77,7 @@ export const cases: CaseItem[] = [
     summary:
       '오래 반복된 피부 소양감과 외이염을 사진 기록과 피부 지표로 추적하며 관리한 케이스입니다.',
     tags: ['아토피', '알러지', 'CADESI'],
-    image: '/images/cases/atopy-cadesi-dog-skin.jpg',
+    image: '/images/atopy-cadesi-dog-skin.jpg',
     blogUrl: 'https://blog.naver.com/chiu_amc/224296033864',
     date: '2026-05-25',
   },
@@ -90,7 +90,7 @@ export const cases: CaseItem[] = [
     summary:
       '개복 수술 전 내시경 제거 가능성을 먼저 평가하고 비절개 접근을 고려한 케이스입니다.',
     tags: ['내시경', '비절개', '이물'],
-    image: '/images/cases/endoscopy-foreign-body-dog.png',
+    image: '/images/endoscopy-foreign-body-dog.png',
     blogUrl: 'https://blog.naver.com/chiu_amc/224294504325',
     date: '2026-05-23',
   },
