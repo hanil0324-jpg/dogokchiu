@@ -60,9 +60,44 @@
     });
   }
 
+  /* ===== FIX 3: 햄버거 메뉴 토글 ===== */
+  function initMobileMenu() {
+    var ham = document.getElementById('gnb-ham');
+    var mob = document.getElementById('mob-nav');
+    if (!ham || !mob) return;
+    ham.addEventListener('click', function () {
+      ham.classList.toggle('open');
+      mob.classList.toggle('open');
+    });
+    // 바깥 클릭 시 닫기
+    document.addEventListener('click', function (e) {
+      if (!ham.contains(e.target) && !mob.contains(e.target)) {
+        ham.classList.remove('open');
+        mob.classList.remove('open');
+      }
+    });
+  }
+
+  /* ===== FIX 4: 스크롤 페이드인 애니메이션 ===== */
+  function initScrollAnim() {
+    var els = document.querySelectorAll('.fade-up');
+    if (!els.length || !window.IntersectionObserver) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
   function init() {
     fixArchive();
     fixCenters();
+    initMobileMenu();
+    initScrollAnim();
   }
 
   if (document.readyState === 'loading') {
