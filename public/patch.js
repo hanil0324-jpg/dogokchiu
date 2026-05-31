@@ -32,21 +32,16 @@
     var rssGrid = document.getElementById('rss-grid');
     if (!fallback) return;
 
-    // RSS 로딩이 3초 이상 걸리면 폴백 표시
-    setTimeout(function () {
-      var gridVisible = rssGrid && rssGrid.style.display !== 'none' && rssGrid.children.length > 0;
-      if (gridVisible) return; // 실제 RSS 로드 성공 시 건드리지 않음
-
-      if (loading) loading.style.display = 'none';
-      if (rssGrid) rssGrid.style.display = 'none';
-      if (errBlock) errBlock.style.display = 'block';   // 부모 div 표시
-      fallback.style.display = 'grid';
-      fallback.style.gridTemplateColumns = 'repeat(auto-fill,minmax(280px,1fr))';
-      fallback.style.gap = '1.25rem';
-      if (!fallback.children.length) {
-        fallback.innerHTML = CASES.map(buildCaseCard).join('');
-      }
-    }, 3000);
+    // 즉시 로딩 텍스트 숨기고 폴백 표시
+    if (loading) loading.style.display = 'none';
+    if (rssGrid) rssGrid.style.display = 'none';
+    if (errBlock) errBlock.style.display = 'block';
+    fallback.style.display = 'grid';
+    fallback.style.gridTemplateColumns = 'repeat(auto-fill,minmax(280px,1fr))';
+    fallback.style.gap = '1.25rem';
+    if (!fallback.children.length) {
+      fallback.innerHTML = CASES.map(buildCaseCard).join('');
+    }
   }
 
   /* ===== FIX 2: 전문센터 카드에 링크 추가 ===== */
