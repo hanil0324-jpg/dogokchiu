@@ -45,21 +45,14 @@
   }
 
   /* ===== FIX 2: 전문센터 카드에 링크 추가 ===== */
-  var CENTER_BLOG_LINKS = [
-    'https://blog.naver.com/chiu_amc?categoryNo=44',
-    'https://blog.naver.com/chiu_amc?categoryNo=43',
-    'https://blog.naver.com/chiu_amc?categoryNo=42',
-    'https://blog.naver.com/chiu_amc?categoryNo=41',
-    'https://blog.naver.com/chiu_amc?categoryNo=40',
-    'https://blog.naver.com/chiu_amc?categoryNo=39',
-  ];
+  var BLOG_URL = 'https://blog.naver.com/chiu_amc';
 
   function fixCenters() {
     var cards = document.querySelectorAll('.center-item');
     if (!cards.length) return;
     cards.forEach(function (card, i) {
       if (card.tagName === 'A') return; // 이미 링크인 경우 건드리지 않음
-      var link = CENTER_BLOG_LINKS[i] || 'https://blog.naver.com/chiu_amc';
+      var link = BLOG_URL;
       card.style.cursor = 'pointer';
       card.addEventListener('click', function () {
         window.open(link, '_blank', 'noopener');
